@@ -7,8 +7,8 @@
 /coverage
 
 # build
-/build
-build.zip
+/dist
+dist.zip
 
 # misc
 .eslintcache

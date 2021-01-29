@@ -1,0 +1,11 @@
+@function space($space) {
+  @return $space * $spacer;
+}
+
+@function from($value) {
+  @return $value + 1;
+}
+
+@function to($value) {
+  @return $value;
+}

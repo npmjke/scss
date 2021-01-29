@@ -1,0 +1,69 @@
+@mixin from($from) {
+  @media (min-width: from($from)) {
+    @content;
+  }
+}
+
+@mixin to($to) {
+  @media (max-width: to($to)) {
+    @content;
+  }
+}
+
+@mixin between($from, $to) {
+  @media (min-width: from($from)) and (max-width: to($to)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include from($tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include between($mobile, $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include to($mobile) {
+    @content;
+  }
+}
+
+@mixin ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin safari {
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+
+@mixin font($font-name, $path, $style: normal, $weight: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    font-style: $style;
+    font-weight: $weight;
+    src: url("#{$path}.eot");
+    src: url("#{$path}.eot?#iefix") format("embedded-opentype"),
+    url("#{$path}.woff2") format("woff2"),
+    url("#{$path}.woff") format("woff"),
+    url("#{$path}.ttf") format("truetype");
+  }
+}
+
+@mixin transition($property: all, $duration: 0.25s, $function: ease, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+  transition-delay: $delay;
+}

@@ -1,0 +1,13 @@
+.boundary-box,
+.bb {
+  @extend .flex-center;
+
+  min-width: 24px;
+  min-height: 24px;
+
+  &-24 {
+    @extend .boundary-box;
+    width: 24px;
+    height: 24px;
+  }
+}

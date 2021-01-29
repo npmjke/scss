@@ -1,0 +1,63 @@
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+
+  &-default {
+    cursor: default;
+  }
+}
+
+.opacity {
+  &-0 {
+    opacity: 0;
+  }
+
+  &-1 {
+    opacity: 1;
+  }
+}
+
+.outline {
+  &-none {
+    outline: none !important;
+  }
+
+  &-0 {
+    outline: 0 !important;
+  }
+}
+
+.outline-none {
+  outline: none !important;
+}
+
+.outline-0 {
+  outline: 0 !important;
+}
+
+.uppercase,
+.upper {
+  text-transform: uppercase;
+}
+
+.lowercase,
+.lower {
+  text-transform: lowercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.font-size-0,
+.fs-0 {
+  font-size: 0;
+}
+
+.overflow-ellipsis,
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
