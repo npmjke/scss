@@ -5,7 +5,8 @@
   "author": "Andriy Sloboda",
   "license": "MIT",
   "scripts": {
-    "start": "node-sass --watch scss -o css"
+    "start": "node-sass --watch scss -o css",
+    "build": "node-sass scss -o dist"
   },
   "dependencies": {
     "node-sass": "^5.0.0"
